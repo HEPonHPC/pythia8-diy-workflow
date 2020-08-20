@@ -143,7 +143,7 @@ if __name__=="__main__":
     M = int(M)
     N = int(N)
     ncoeff  = app.tools.numCoeffsRapp(DIM, (M,N))
-    npoints = ncoeff*opts.FIDEL
+    npoints = int(ncoeff*opts.FIDEL)
     print("Sampling {} points with {} algorithm.".format(npoints, opts.SAMPLER))
 
     pnames, sampledpoints = sample(rr, npoints, opts.SAMPLER, opts.SEED)
